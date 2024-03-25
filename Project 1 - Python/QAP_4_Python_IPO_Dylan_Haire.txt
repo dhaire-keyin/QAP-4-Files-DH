@@ -1,0 +1,54 @@
+Description: 
+Author: Dylan Haire
+Date(s): Mar. 15, 2024; Mar 23, 2024
+
+Inputs:
+Defaults.dat:
+# Next policy number
+# Basic premium
+# Discount for additional cars
+# Cost of extra liability coverage
+# Cost of glass coverage
+# Cost for loaner car coverage
+# HST rate
+# Processing fee for monthly payments
+1944
+869.00
+0.25
+130.00
+86.00
+58.00
+0.15
+39.99
+
+User inputs:
+Customer first name ("END" to exit?)
+Customer last name
+Street address
+City
+Province
+Postal Code
+Phone number
+Number of cars
+Extra Liability (Y/N)
+Glass coverage (Y/N)
+Loaner car (Y/N)
+
+Processing:
+
+# Constants
+
+# Functions
+
+# Calculations
+
+Outputs:
+
+'''
+Receipt formatting:
+ Claim #  Claim Date        Amount
+ ---------------------------------
+ #####    YYYY-MM-DD    $##,###.##
+ #####    YYYY-MM-DD    $##,###.##
+ #####    YYYY-MM-DD    $##,###.##
+'''
