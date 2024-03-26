@@ -1,6 +1,6 @@
 Description: 
 Author: Dylan Haire
-Date(s): Mar. 15, 2024; Mar 23, 2024
+Date(s): Mar. 15, 2024; Mar. 23, 2024; Mar. 25, 2024 
 
 Inputs:
 Defaults.dat:
@@ -22,28 +22,66 @@ Defaults.dat:
 39.99
 
 User inputs:
-Customer first name ("END" to exit?)
-Customer last name
-Street address
-City
-Province
-Postal Code
-Phone number
-Number of cars
-Extra Liability (Y/N)
-Glass coverage (Y/N)
-Loaner car (Y/N)
+# Customer first name ("END" to exit?) # title case
+custNameF = input("Enter the customer's first name ('END' to exit): ")
+# Customer last name # title case
+custNameL = input("Enter the customer's last name: ")
+# Street address
+custAddrSt = input("Enter the customer's street address: ")
+# City # title case
+custAddrCity = input("")
+# Province # Validate - List
+custAddrProv = input("")
+# Postal Code
+custAddrPost = input("")
+# Phone number
+custPhone = input("")
+# Number of cars
+numCars = input("")
+# Extra Liability (Y/N) # Upper
+isExtraLiab = input("").upper()
+# Glass coverage (Y/N) # Upper
+isExtraGlass = input("").upper()
+# Loaner car (Y/N) # Upper
+isExtraLoaner = input("").upper()
+
+Payment Method (Full/Monthly/Down Pay) # Validate - List
 
 Processing:
 
 # Constants
+# Open Defaults.dat
+f = open("Defaults.dat", "r")
+# Assign constants
+NUM_POLICY = f.readline()
+PREM_BASIC =
+RATE_DISCOUNT =
+FEE_LIAB =
+FEE_GLASS =
+FEE_LOANER =
+RATE_HST = 
+FEE_MNTH_PROC =
 
+# Print constants to screen to confirm successful import
 # Functions
-
+# getCostPrem(numCars) - Calculates premium costs based on the number of cars, with a basic rate on the first car and a 25% discount on all subsequent cars
+define getCostPrem(numCars):	
+	for car in numCars:
+		return costPrem
+# getCostExtra(isExtraLiab,isExtraGlass,isExtraLoaner) - Calculates extra costs based on the user's inputs for the coverage options
+define getCostExtra(isExtraLiab,isExtraGlass,isExtraLoaner):
+	# for each option in the extras
+		# Calculate the associated cost
+	return [isExtraLiab,isExtraGlass,isExtraLoaner]
 # Calculations
+costPrem = getCostPrem(numCars)
+
+costExtraTot = costExtraLiab + costExtraGlass + costExtraLoaner
 
 Outputs:
-
+# Display
+# Create string-formatted variables for all input and calculated values
+# Use f-strings in well-formatted receipt
 '''
 Receipt formatting:
  Claim #  Claim Date        Amount
